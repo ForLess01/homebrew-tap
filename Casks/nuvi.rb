@@ -1,6 +1,6 @@
 cask "nuvi" do
-  version "1.0.0" # Cambialo por tu versión del release
-  sha256 "PEGAR_AQUÍ_EL_HASH_SHA256"
+  version "1.0.0"
+  sha256 "a2b236fed6761d04732b0620a6c41833b60e7a5e7fcbc529efbf1e1e22d6274f"
 
   url "https://github.com/ForLess01/Nuvi_STT/releases/download/v#{version}/Nuvi.zip"
   name "Nuvi"
@@ -10,7 +10,7 @@ cask "nuvi" do
   app "Nuvi.app"
 
   zap trash: [
-    "~/Library/Application Support/Nuvi",
-    "~/Library/Preferences/nuvi.settings.plist", # Ajustar según tu bundle ID
+    "~/Library/Application Support/com.nuvi.app",
+    "~/Library/Preferences/com.nuvi.app.plist",
   ]
 end
