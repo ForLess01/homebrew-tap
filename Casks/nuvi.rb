@@ -9,6 +9,16 @@ cask "nuvi" do
 
   app "Nuvi.app"
 
+  caveats <<~EOS
+    Nuvi is not notarized (notarization requires a paid Apple Developer account),
+    so macOS may block it on first launch. To allow it, run once:
+
+      xattr -dr com.apple.quarantine "/Applications/Nuvi.app"
+
+    …or right-click Nuvi.app -> Open -> Open. Then grant Microphone, Speech
+    Recognition and Accessibility in System Settings > Privacy & Security.
+  EOS
+
   zap trash: [
     "~/Library/Application Support/com.nuvi.app",
     "~/Library/Application Support/FluidAudio",
