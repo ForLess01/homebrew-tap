@@ -1,6 +1,6 @@
 cask "nuvi" do
-  version "1.0.0"
-  sha256 "a2b236fed6761d04732b0620a6c41833b60e7a5e7fcbc529efbf1e1e22d6274f"
+  version "2.0.0"
+  sha256 "eea1938efc3e1829571697649f498288bc49b266bdf67f221ab623659fd5a640"
 
   url "https://github.com/ForLess01/Nuvi_STT/releases/download/v#{version}/Nuvi.zip"
   name "Nuvi"
@@ -11,6 +11,7 @@ cask "nuvi" do
 
   zap trash: [
     "~/Library/Application Support/com.nuvi.app",
+    "~/Library/Application Support/FluidAudio",
     "~/Library/Preferences/com.nuvi.app.plist",
   ]
 end
