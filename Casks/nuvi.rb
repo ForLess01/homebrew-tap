@@ -1,11 +1,14 @@
 cask "nuvi" do
-  version "2.1.0"
-  sha256 "03c4ffbf742ba2bdb93763fa59e2ff4312df3538c288bd34dd9004f2a67cd487"
+  version "2.2.0"
+  sha256 "70ecab3c8567af3e688f3c8c8635298c618b7badfde617134a05e1b824f50acf"
 
   url "https://github.com/ForLess01/Nuvi_STT/releases/download/v#{version}/Nuvi.zip"
   name "Nuvi"
   desc "Native macOS menu-bar dictation app with a ferrofluid visualizer"
   homepage "https://github.com/ForLess01/Nuvi_STT"
+
+  depends_on macos: :tahoe
+  depends_on arch: :arm64
 
   app "Nuvi.app"
 
