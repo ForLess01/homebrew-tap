@@ -12,6 +12,10 @@ cask "nuvi" do
 
   app "Nuvi.app"
 
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Nuvi.app"], must_succeed: false
+  end
+
   caveats <<~EOS
     Nuvi is not notarized (notarization requires a paid Apple Developer account),
     so macOS may block it on first launch. To allow it, run once:
