@@ -1,6 +1,6 @@
 cask "nuvi" do
-  version "2.2.2"
-  sha256 "72ddacc634ffc15a6cc89998f808a6ea26322ed4643ddce2bbb2e6222e6d6bdc"
+  version "2.2.3"
+  sha256 "1a60ccec82f29bd5d25522a8379491e5075a11ddd6575cdb6c1b1cc85e94abb5"
 
   url "https://github.com/ForLess01/Nuvi_STT/releases/download/v#{version}/Nuvi.zip"
   name "Nuvi"
